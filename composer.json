@@ -1,0 +1,68 @@
+{
+    "name": "webtheory/voltaire",
+    "description": "Library of WordPress theme api helpers",
+    "homepage": "https://github.com/spider-mane/voltaire",
+    "license": "MIT",
+
+    "keywords": [
+        "webtheory",
+        "voltaire"
+    ],
+
+    "authors": [{
+        "name": "Chris Williams",
+        "email": "spider.mane.web@gmail.com",
+        "homepage": "https://github.com/spider-mane",
+        "role": "Developer"
+    }],
+
+    "require": {
+        "php": "^7.1"
+    },
+
+    "require-dev": {
+        "filp/whoops": "^2.5",
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "phpbench/phpbench": "@dev",
+        "phpunit/phpunit": "^8.2",
+        "squizlabs/php_codesniffer": "^3.0",
+        "symfony/var-dumper": "^4.3",
+        "timber/timber": "^1.12",
+        "twig/twig": "^2.12"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "WebTheory\\Voltaire\\": "src"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "WebTheory\\Voltaire\\": "tests"
+        }
+    },
+
+    "suggest": {
+        "twig/twig": "Twig, the flexible, fast, and secure template language for PHP",
+        "timber/timber": "Plugin to write WordPress themes w object-oriented code and the Twig Template Engine"
+    },
+
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "check-style": "vendor/bin/phpcs src tests",
+        "fix-style": "vendor/bin/phpcbf src tests",
+        "benchmark": "vendor/bin/phpbench"
+    },
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+
+    "config": {
+        "sort-packages": true
+    }
+}
