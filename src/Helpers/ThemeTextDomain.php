@@ -1,6 +1,6 @@
 <?php
 
-namespace WebTheory\Voltaire;
+namespace WebTheory\Voltaire\Helpers;
 
 class ThemeTextDomain
 {

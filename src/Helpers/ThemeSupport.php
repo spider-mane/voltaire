@@ -1,6 +1,6 @@
 <?php
 
-namespace WebTheory\Voltaire;
+namespace WebTheory\Voltaire\Helpers;
 
 class ThemeSupport
 {
@@ -34,5 +34,13 @@ class ThemeSupport
     public static function postThumbnails(string ...$postTypes)
     {
         add_theme_support('post-thumbnails', ...$postTypes);
+    }
+
+    /**
+     *
+     */
+    public static function titleTag()
+    {
+        add_theme_support('title-tag');
     }
 }

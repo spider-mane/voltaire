@@ -16,3 +16,7 @@ phpunit.xml
 # misc
 build
 coverage
+
+# tests
+tests/acceptance/public/*
+!tests/acceptance/public/wp-content/themes/test/

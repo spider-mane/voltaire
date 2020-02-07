@@ -1,6 +1,6 @@
 <?php
 
-namespace WebTheory\Voltaire;
+namespace WebTheory\Voltaire\Helpers;
 
 class TemplateRouter
 {
@@ -32,7 +32,6 @@ class TemplateRouter
     protected function hook()
     {
         foreach ($this->routes as $route) {
-
             add_filter("{$route}_template_hierarchy", [$this, 'redirect'], PHP_INT_MAX, 1);
         }
 
