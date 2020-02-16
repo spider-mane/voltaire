@@ -7,9 +7,17 @@ class ThemeSupport
     /**
      *
      */
-    public static function customHeader(array $defaults)
+    public static function postThumbnails(string ...$postTypes)
     {
-        add_theme_support('custom-header', $defaults);
+        add_theme_support('post-thumbnails', ...$postTypes);
+    }
+
+    /**
+     *
+     */
+    public static function postFormats(array $formats)
+    {
+        add_theme_support('post-formats', $formats);
     }
 
     /**
@@ -31,9 +39,25 @@ class ThemeSupport
     /**
      *
      */
-    public static function postThumbnails(string ...$postTypes)
+    public static function customHeaderUploads()
     {
-        add_theme_support('post-thumbnails', ...$postTypes);
+        add_theme_support('custom-header-uploads');
+    }
+
+    /**
+     *
+     */
+    public static function customHeader(array $defaults)
+    {
+        add_theme_support('custom-header', $defaults);
+    }
+
+    /**
+     *
+     */
+    public static function customBackground(array $defaults)
+    {
+        add_theme_support('custom-background', $defaults);
     }
 
     /**
