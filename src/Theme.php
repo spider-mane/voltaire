@@ -52,8 +52,8 @@ class Theme extends Container
     {
         $this
             ->bindConfiguration()
-            ->addProvidersFromConfig()
-            ->bindAppToAccessors();
+            ->bindData()
+            ->addProvidersFromConfig();
 
         return $this;
     }
@@ -72,6 +72,16 @@ class Theme extends Container
     protected function bindConfiguration()
     {
         $this->share('config', new Config($this->configPath()));
+
+        return $this;
+    }
+
+    /**
+     *
+     */
+    protected function bindData()
+    {
+        $this->share('data', new Config($this->dataPath()));
 
         return $this;
     }
@@ -109,16 +119,16 @@ class Theme extends Container
      */
     protected function addPathsToContainer()
     {
-        $this->get('path', $this->path());
-        $this->get('path.app', $this->appPath());
-        $this->get('path.base', $this->basePath());
-        $this->get('path.data', $this->dataPath());
-        $this->get('path.views', $this->viewPath());
-        $this->get('path.routes', $this->routePath());
-        $this->get('path.assets', $this->assetsPath());
-        $this->get('path.config', $this->configPath());
-        $this->get('path.languages', $this->langPath());
-        $this->get('path.bootstrap', $this->bootstrapPath());
+        $this->share('path', $this->path());
+        $this->share('path.app', $this->appPath());
+        $this->share('path.base', $this->basePath());
+        $this->share('path.data', $this->dataPath());
+        $this->share('path.views', $this->viewPath());
+        $this->share('path.routes', $this->routePath());
+        $this->share('path.assets', $this->assetsPath());
+        $this->share('path.config', $this->configPath());
+        $this->share('path.languages', $this->langPath());
+        $this->share('path.bootstrap', $this->bootstrapPath());
     }
 
     /**
