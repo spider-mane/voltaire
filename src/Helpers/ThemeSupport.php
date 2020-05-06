@@ -7,64 +7,15 @@ class ThemeSupport
     /**
      *
      */
-    public static function postThumbnails(string ...$postTypes)
+    public static function set(array $supports)
     {
-        add_theme_support('post-thumbnails', ...$postTypes);
-    }
+        foreach ($supports as $feature => $args) {
 
-    /**
-     *
-     */
-    public static function postFormats(array $formats)
-    {
-        add_theme_support('post-formats', $formats);
-    }
-
-    /**
-     *
-     */
-    public static function html5(array $tags)
-    {
-        add_theme_support('html5', $tags);
-    }
-
-    /**
-     *
-     */
-    public static function customLogo(string $defaults)
-    {
-        add_theme_support('custom-logo', $defaults);
-    }
-
-    /**
-     *
-     */
-    public static function customHeaderUploads()
-    {
-        add_theme_support('custom-header-uploads');
-    }
-
-    /**
-     *
-     */
-    public static function customHeader(array $defaults)
-    {
-        add_theme_support('custom-header', $defaults);
-    }
-
-    /**
-     *
-     */
-    public static function customBackground(array $defaults)
-    {
-        add_theme_support('custom-background', $defaults);
-    }
-
-    /**
-     *
-     */
-    public static function titleTag()
-    {
-        add_theme_support('title-tag');
+            if (is_int($feature)) {
+                add_theme_support($args);
+            } else {
+                add_theme_support($feature, $args);
+            }
+        }
     }
 }

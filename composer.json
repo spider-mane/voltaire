@@ -21,7 +21,8 @@
     "giggsey/libphonenumber-for-php": "^8.11",
     "hassankhan/config": "^2.1",
     "league/container": "^3.3",
-    "psr/container": "^1.0"
+    "psr/container": "^1.0",
+    "webtheory/guctilitybelt": "^0.2.5"
   },
 
   "require-dev": {

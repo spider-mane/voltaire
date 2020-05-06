@@ -4,6 +4,7 @@ namespace WebTheory\Voltaire;
 
 use League\Container\Container;
 use Psr\Container\ContainerInterface;
+use WebTheory\GuctilityBelt\Config;
 
 class Theme extends Container
 {
@@ -144,18 +145,6 @@ class Theme extends Container
     }
 
     /**
-     * Get the application directory.
-     *
-     * @param string $path
-     *
-     * @return string
-     */
-    public function appPath($path = '')
-    {
-        return realpath($this->basePath('app') . DIRECTORY_SEPARATOR . $path);
-    }
-
-    /**
      * Get the path of the web server root.
      *
      * @param string $path
@@ -165,6 +154,18 @@ class Theme extends Container
     public function path($path = '')
     {
         return realpath(get_theme_file_path($path));
+    }
+
+    /**
+     * Get the application directory.
+     *
+     * @param string $path
+     *
+     * @return string
+     */
+    public function appPath($path = '')
+    {
+        return realpath($this->basePath('app') . DIRECTORY_SEPARATOR . $path);
     }
 
     /**

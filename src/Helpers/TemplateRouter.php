@@ -15,7 +15,7 @@ class TemplateRouter
     protected $routes = [
         'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy',
         'date', 'embed', 'home', 'frontpage', 'page', 'paged', 'search',
-        'single', 'singular', 'attachment',
+        'single', 'singular', 'attachment'
     ];
 
     /**
